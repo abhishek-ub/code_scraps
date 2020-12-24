@@ -3,6 +3,7 @@
 
 int main()
 {
-  adventofcode_day2();
+  AdvCodeDay2 advc;
+  advc.adventofcode_day2_part2();
   return 0;
 }
