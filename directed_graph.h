@@ -24,6 +24,7 @@ class UGraph {
 
       if (!_visited[i] && g_dsf_cycle(i)) return true;
     }
+    _rec_stack[node] = false;
     return false;
   }
 
@@ -40,9 +41,18 @@ public:
   {
     assert(u < _size);
     assert(v < _size);
-
     _adj[u].push_back(v);
-    _adj[v].push_back(u);
+  }
+
+  void print_graph()
+  {
+    for (u64 i = 0; i < _size; ++i) {
+      std::cout << i << " :=> [ ";
+      for (u64 j : _adj[i]) {
+        std::cout << j << " ";
+      }
+      std::cout << "]" << std::endl;
+    }
   }
 
   bool has_cycles()
@@ -57,14 +67,14 @@ public:
 
 void find_cycles_test()
 {
-  UGraph g(5);
+  UGraph g(4);
   g.add_edge(0, 1); 
   g.add_edge(0, 2); 
   g.add_edge(1, 2); 
   g.add_edge(2, 0); 
   g.add_edge(2, 3); 
   g.add_edge(3, 3); 
-  
+  g.print_graph();
   if (g.has_cycles()) {
     std::cout << "directed graph has cycles \n";
   }
