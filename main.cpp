@@ -4,6 +4,7 @@
 #include "task_schedular.h"
 #include "dijkstra_sh_path.h"
 #include "directed_graph.h"
+#include "ride_share.h"
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
   //adventofcode_day3();
   //get_shedule_test();
   //test_dkst();
-  find_cycles_test();
+  //find_cycles_test();
+  ride_share_test();
   return 0;
 }
