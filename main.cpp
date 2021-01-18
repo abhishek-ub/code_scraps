@@ -5,6 +5,7 @@
 #include "dijkstra_sh_path.h"
 #include "directed_graph.h"
 #include "ride_share.h"
+#include "n_queen_prob.h"
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
   //get_shedule_test();
   //test_dkst();
   //find_cycles_test();
-  ride_share_test();
+  //ride_share_test();
+  solve_n_q_prob();
   return 0;
 }
