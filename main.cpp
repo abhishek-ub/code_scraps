@@ -7,6 +7,7 @@
 #include "ride_share.h"
 #include "n_queen_prob.h"
 #include "first_non_repeating_char.h"
+#include "shard_array.h"
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
   //find_cycles_test();
   //ride_share_test();
   //solve_n_q_prob();
-  first_non_repeating_char_test();
+  //first_non_repeating_char_test();
+  shard_array_test();
   return 0;
 }
